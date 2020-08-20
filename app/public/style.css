@@ -1,0 +1,57 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1.4em;
+  letter-spacing: 0.08em;
+}
+
+header {
+  background-color: Black;
+  color: white;
+  font-family: monospace, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  padding: 0.4em 10%;
+  box-shadow: 0px 0px 13px black;
+}
+
+.container {
+  padding: 4em 10%;
+  margin-bottom: 4em;
+}
+
+img {
+  float: left;
+  width: 9em;
+  height: 9em;
+  object-fit: cover;
+  border: none;
+  border-radius: 10em;
+  margin: 0 2em 2em 0;
+  box-shadow: 0px 0px 13px black;
+}
+
+h2 {
+    margin: 3em 0;
+    color: black;
+    font-weight: bold;
+    float: left;
+}
+
+blockquote {
+  background-color: #e5e5e5;
+  border-left: 3px solid black;
+  border-radius: 3px;
+  padding: 1em;
+  clear: both;
+  font-weight: bold;
+}
+
+span, p, li {
+  font-family: cursive;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
