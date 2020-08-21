@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Project Explorer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar inner-container row">
+        <a href="index.html" id="site-home" class="center align">Project Explorer</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="hidden-nav row">
+          <div class="row capped center-align">
+            <input type="text" name="search-in" value="" placeholder="Search Projects" class="searchbar">
+            <button type="button" name="search-btn" class="searchbtn">Search</button>
+            <a href="search.html">Projects</a>
+            <a href="createProject.html">Submit</a>
+          </div>
+          <div class="row capped center-align">
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+          </div>
+        </div>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      </nav>
+    </header>
+    <section class="container">
+      <h2>Project Gallery</h2>
+      <form class="form row search" action="#" method="post">
+        <input type="text" name="search" value="" placeholder="Search project name, authors, abstract, tags">
+        <label for="searchparam">Search by</label>
+        <select class="formselect" name="searchparam">
+          <option value="name" selected>Name</option>
+          <option value="authors">Author(s)</option>
+          <option value="abstract">Abstract</option>
+          <option value="tags">tag(s)</option>
+        </select>
+        <input type="submit" value="Submit" class="button">
+      </form>
+    </section>
+    <section>
+      <div class="row inner-container justify-start searchresults">
+        <h3>All Projects</h3><span>(4 results)</span>
+      </div>
+      <div class="container row">
+        <div class="project-col">
+          <h4>Project 1</h4>
+          <h5>James Li, Ade Brian</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><span>#javascript,</span><span> #mongodb</span></p>
+        </div>
+        <div class="project-col">
+          <h4>Project 2</h4>
+          <h5>Fried Lim, Tola Daniel</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><span>#ejs,</span><span> #ci</span></p>
+        </div>
+        <div class="project-col">
+          <h4>Project 3</h4>
+          <h5>Ben Rice, Ade Sola</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><span>#css,</span><span> #html</span></p>
+        </div>
+        <div class="project-col">
+          <h4>Project 4</h4>
+          <h5>Henry James, Bola Ade</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><span>#yaml,</span><span> #ejs</span></p>
+        </div>
+      </div>
+    </section>
+    <footer class="inner-container">
+      <span>Project Explorer &copy; 2020 &#8729; Edconnect</span>
+    </footer>
+  </body>
+</html>

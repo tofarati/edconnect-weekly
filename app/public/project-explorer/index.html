@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Project Explorer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+    const body = document.body;
+    let lastScroll = 0;
+    window.addEventListener("scroll", function () {
+      const scroll = window.pageYOffset;
+      if (scroll == 0) {
+      body.classList.remove("scroll-up");
+    }
+    if (scroll > lastScroll && !body.classList.contains("scroll-down")) {
+      body.classList.remove("scroll-up");
+      body.classList.add("scroll-down");
+    } else if (scroll < lastScroll && !body.classList.contains("scroll-up")) {
+      body.classList.remove("scroll-down");
+      body.classList.add("scroll-up");
+    }
+    lastScroll = scroll;
+    });
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar inner-container row">
+        <a href="index.html" id="site-home" class="center align">Project Explorer</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="hidden-nav row">
+          <div class="row capped center-align">
+            <input type="text" name="search-in" value="" placeholder="Search Projects" class="searchbar">
+            <button type="button" name="search-btn" class="searchbtn">Search</button>
+            <a href="search.html">Projects</a>
+            <a href="createProject.html">Submit</a>
+          </div>
+          <div class="row capped center-align">
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+          </div>
+        </div>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      </nav>
+    </header>
+    <section class="hero inner-container">
+      <h1>Welcome to Project Explorer</h1>
+      <p>Project Explorer is a repository for final year projects across all departments at your institution. You can upload and search projects and learn from others.</p>
+      <button type="button" name="get-started" class="signupbtn">Get Started</button>
+      <button type="button" name="login" class="loginbtn">Login</button>
+    </section>
+    <section class="container row ">
+      <div class="project-col">
+        <h4>Project 1</h4>
+        <h5>James Li, Ade Brian</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><span>#javascript,</span><span> #mongodb</span></p>
+      </div>
+      <div class="project-col">
+        <h4>Project 2</h4>
+        <h5>Fried Lim, Tola Daniel</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><span>#ejs,</span><span> #ci</span></p>
+      </div>
+      <div class="project-col">
+        <h4>Project 3</h4>
+        <h5>Ben Rice, Ade Sola</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><span>#css,</span><span> #html</span></p>
+      </div>
+      <div class="project-col">
+        <h4>Project 4</h4>
+        <h5>Henry James, Bola Ade</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><span>#yaml,</span><span> #ejs</span></p>
+      </div>
+    </section>
+    <footer class="inner-container">
+      <span>Project Explorer &copy; 2020 &#8729; Edconnect</span>
+    </footer>
+  </body>
+</html>

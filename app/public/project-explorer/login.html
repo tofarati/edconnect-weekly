@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Project Explorer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar inner-container row">
+        <a href="index.html" id="site-home" class="center align">Project Explorer</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="hidden-nav row">
+          <div class="row capped center-align">
+            <input type="text" name="search-in" value="" placeholder="Search Projects" class="searchbar">
+            <button type="button" name="search-btn" class="searchbtn">Search</button>
+            <a href="search.html">Projects</a>
+            <a href="createProject.html">Submit</a>
+          </div>
+          <div class="row capped center-align">
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+          </div>
+        </div>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      </nav>
+    </header>
+    <section class="container">
+        <form class="form" action="index.html" method="post">
+          <h2>Login</h2>
+          <div><label for="email">Email Address</label><br><input type="email" name="email" value="" class="fullwidth" placeholder="Enter email"><br></div>
+          <div><label for="password">Password</label><br><input type="password" name="password" value="" class="fullwidth" placeholder="Password"><br></div>
+          <input type="submit" value="Login" class="button align-start">
+        </form>
+    </section>
+    <footer class="inner-container">
+      <span>Project Explorer &copy; 2020 &#8729; Edconnect</span>
+    </footer>
+  </body>
+</html>

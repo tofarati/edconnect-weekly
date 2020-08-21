@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Project Explorer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar inner-container row">
+        <a href="index.html" id="site-home" class="center align">Project Explorer</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="hidden-nav row">
+          <div class="row capped center-align">
+            <input type="text" name="search-in" value="" placeholder="Search Projects" class="searchbar">
+            <button type="button" name="search-btn" class="searchbtn">Search</button>
+            <a href="search.html">Projects</a>
+            <a href="createProject.html">Submit</a>
+          </div>
+          <div class="row capped center-align">
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+          </div>
+        </div>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      </nav>
+    </header>
+    <section class="container project">
+      <div class="row justify-start limitwidth">
+        <h2>Project 4</h2>
+      </div>
+      <ul class="row unstyle limitwidth">
+        <li>Created By<br>Ade Ade</li>
+        <li>Date Created<br>03/03/2020</li>
+        <li>Last Updated<br>04/04//2020</li>
+        <li><a href="editProject.html" class="button opaquebtn">Edit Project</a></li>
+      </ul>
+      <div class="row projectview">
+        <div class="col abstract">
+          <h4>Project Abstract</h4>
+          <p class="bounded">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col">
+          <h4>Project Details</h4>
+          <div class="projectdetails">
+            <h4 class="detail">Author(s)</h4>
+            <label class="authors">Henry James<br></label>
+            <label class="authors">Bola Ade<br></label>
+            <label class="tags">#yaml, #ejs<br></label>
+          </div>
+          <div class="files">
+            <h4 class="detail">Project files</h4>
+            <p class="filelist">No file uploaded yet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="inner-container">
+      <span>Project Explorer &copy; 2020 &#8729; Edconnect</span>
+    </footer>
+  </body>
+</html>

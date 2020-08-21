@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Project Explorer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar inner-container row">
+        <a href="index.html" id="site-home" class="center align">Project Explorer</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="hidden-nav row">
+          <div class="row capped center-align">
+            <input type="text" name="search-in" value="" placeholder="Search Projects" class="searchbar">
+            <button type="button" name="search-btn" class="searchbtn">Search</button>
+            <a href="search.html">Projects</a>
+            <a href="createProject.html">Submit</a>
+          </div>
+          <div class="row capped center-align">
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+          </div>
+        </div>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      </nav>
+    </header>
+    <section class="container project">
+      <div class="row justify-start limitwidth">
+        <h2>Project 4</h2>
+      </div>
+      <ul class="row unstyle limitwidth">
+        <li>Created By<br>Ade Ade</li>
+        <li>Date Created<br>03/03/2020</li>
+        <li>Last Updated<br>04/04//2020</li>
+        <li><a href="viewProject.html" class="button opaquebtn">View Project</a> </li>
+      </ul>
+    </section>
+    <section class="container">
+      <form class="form edit" action="viewProject.html" method="post">
+        <div class="row stretch">
+          <div class="col">
+            <h3>Edit Project</h3>
+            <label for="title">Project Name<br><input type="text" name="title" value="Project 4"><br></label>
+            <label for="abstract">Project Abstract<br><textarea name="abstract" rows="8" cols="80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea><br></label>
+            <label for="authors">Author(s)<br><input type="text" name=authors value="Ade Ade, Brian James"><br></label>
+            <label for="tags">Tag(s)<br><input type="text" name="tags" value="#yaml, #ejs"><br></label>
+          </div>
+          <div class="col files">
+            <h3>Manage Project files</h3>
+            <input type="file" id="filepicker" value="Browse" class="filepicker fullwidth" placeholder="Click to open file browser">
+            <h3>Project Files</h3>
+            <p class="center bounded">No file uploaded yet</p>
+          </div>
+        </div>
+        <input type="submit" value="Save" class="button">
+      </form>
+    </section>
+    <footer class="inner-container">
+      <span>Project Explorer &copy; 2020 &#8729; Edconnect</span>
+    </footer>
+  </body>
+</html>
