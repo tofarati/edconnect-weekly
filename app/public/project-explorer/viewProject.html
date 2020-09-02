@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Project Explorer</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar inner-container row">
-        <a href="index.html" id="site-home" class="center align">Project Explorer</a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <div class="hidden-nav row">
-          <div class="row capped center-align">
-            <input type="text" name="search-in" value="" placeholder="Search Projects" class="searchbar">
-            <button type="button" name="search-btn" class="searchbtn">Search</button>
-            <a href="search.html">Projects</a>
-            <a href="createProject.html">Submit</a>
-          </div>
-          <div class="row capped center-align">
-            <a href="register.html">Sign Up</a>
-            <a href="login.html">Login</a>
-          </div>
-        </div>
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-      </nav>
-    </header>
-    <section class="container project">
-      <div class="row justify-start limitwidth">
-        <h2>Project 4</h2>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <title>Project Explorer</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary row">
+      <a href="index.html" class="navbar-brand ml-2">Project Explorer</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-lg-flex" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0" name="prp" action="index.html" method="post">
+          <input class="form-control mx-2" placeholder="Search Projects">
+          <button class="btn btn-outline-light mx-2 my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav flex-fill d-lg-flex">
+          <li class="nav-item mx-2"><a class="nav-link" href="search.html">Projects</a></li>
+          <li class="nav-item mx-2 mr-lg-auto"><a class="nav-link" href="createProject.html">Submit</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="register.html">Sign up</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
       </div>
-      <ul class="row unstyle limitwidth">
-        <li>Created By<br>Ade Ade</li>
-        <li>Date Created<br>03/03/2020</li>
-        <li>Last Updated<br>04/04//2020</li>
-        <li><a href="editProject.html" class="button opaquebtn">Edit Project</a></li>
+    </nav>
+  </header>
+    <section class="container">
+      <div class="mt-4 mb-3">
+        <h4 class="text-dark">Project 4</h4>
+      </div>
+      <ul class="list-unstyled d-flex justify-content-between text-dark mb-5 ml-md-2">
+        <li><h6>Created By<br>Ade Ade</h6></li>
+        <li><h6>Date Created<br>03/03/2020</h6></li>
+        <li><h6>Last Updated<br>04/04/2020</h6></li>
+        <li><a href="editProject.html" class="btn btn-primary">Edit Project</a></li>
       </ul>
       <div class="row projectview">
-        <div class="col abstract">
-          <h4>Project Abstract</h4>
-          <p class="bounded">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="col">
+          <h5 class="mb-4">Project Abstract</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="col">
-          <h4>Project Details</h4>
-          <div class="projectdetails">
-            <h4 class="detail">Author(s)</h4>
-            <label class="authors">Henry James<br></label>
-            <label class="authors">Bola Ade<br></label>
-            <label class="tags">#yaml, #ejs<br></label>
+          <h5 class="mb-4">Project Details</h5>
+          <div class="card mb-3 small">
+            <div class="card-header">
+              <h5>Author(s)</h5>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">Henry James<br></li>
+              <li class="list-group-item">Bola Ade<br></li>
+            </ul>
+            <div class="card-footer">
+              <span>#yaml, #ejs</span>
+            </div>
           </div>
-          <div class="files">
-            <h4 class="detail">Project files</h4>
-            <p class="filelist">No file uploaded yet</p>
+          <div class="card mb-5 small">
+            <div class="card-header">
+              <h5>Project Files</h5>
+            </div>
+            <div class="card-body">
+              <p class="text-center">No file uploaded yet</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <footer class="inner-container">
-      <span>Project Explorer &copy; 2020 &#8729; Edconnect</span>
+    <footer class="container">
+      <div class="bg-light p-2 d-flex">
+        <span class="ml-auto">Project Explorer &copy; 2020 &#8729; Edconnect</span>
+      </div>
     </footer>
   </body>
 </html>

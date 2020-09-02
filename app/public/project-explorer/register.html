@@ -1,60 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Project Explorer</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar inner-container row">
-        <a href="index.html" id="site-home" class="center align">Project Explorer</a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <div class="hidden-nav row">
-          <div class="row capped center-align">
-            <input type="text" name="search-in" value="" placeholder="Search Projects" class="searchbar">
-            <button type="button" name="search-btn" class="searchbtn">Search</button>
-            <a href="search.html">Projects</a>
-            <a href="createProject.html">Submit</a>
-          </div>
-          <div class="row capped center-align">
-            <a href="register.html">Sign Up</a>
-            <a href="login.html">Login</a>
-          </div>
-        </div>
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-      </nav>
-    </header>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <title>Project Explorer</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary row">
+      <a href="index.html" class="navbar-brand ml-2">Project Explorer</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-lg-flex" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0" name="register" action="index.html" method="post">
+          <input class="form-control mx-2" placeholder="Search Projects">
+          <button class="btn btn-outline-light mx-2 my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav flex-fill d-lg-flex">
+          <li class="nav-item mx-2"><a class="nav-link" href="search.html">Projects</a></li>
+          <li class="nav-item mx-2 mr-lg-auto"><a class="nav-link" href="createProject.html">Submit</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="register.html">Sign up</a></li>
+          <li class="nav-item mx-2"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     <section class="container">
-      <form action="index.html" method="post">
-        <h2>Signup</h2>
-        <div class="row flexwrap signup">
-        <label for="firstname">First name <br><input type="text" name="firstname" value="" placeholder="First name"><br></label>
-        <label for="lastname">Last name <br><input type="text" name="lastname" value="" placeholder="Last name"><br></label>
-        <label for="email">Email Address <br><input type="email" name="email" value="" placeholder="Your Email address"><br></label>
-        <label for="password">Password <br><input type="password" name="password" value="" placeholder="Your Password"><br></label>
-        <label for="program">Program <br>
-          <select class="formselect" name="program">
-            <option selected>Choose...</option>
-            <option value="CS">Computer Science</option>
-            <option value="CIS">Computer Information Systems</option>
-            <option value="PH">Public Health</option>
-          </select><br></label>
-        <label for="matricnum" class="quarter">Matric number <br><input type="text" name="matricnum" value="" placeholder="e.g. 16/2020"><br></label>
-        <label for="gradyear"  class="quarter">Graduation year<br>
-          <select class="formselect" name="gradyear">
-            <option selected>Choose...</option>
-            <option value="2015">2015</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-          </select><br></label>
+      <h2 class="mt-4">Sign up</h2>
+      <form action="index.html" class="form mt-3" method="post">
+        <div class="form-row">
+          <div class="col-md-6 form-group">
+            <label for="firstname">First name</label>
+            <input type="text" name="firstName" class="form-control" value="" placeholder="First name">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="lastname">Last name</label>
+            <input type="text" name="lastName" class="form-control" value="" placeholder="Last name">
+          </div>
         </div>
-        <input type="submit" value="Sign Up" class="button">
+        <div class="form-row">
+          <div class="col-md-6 form-group">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" class="form-control" value="" placeholder="Your Email address">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" value="" placeholder="Your Password">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 form-group">
+            <label for="program">Program</label>
+            <select class="form-control" name="program">
+              <option selected>Choose...</option>
+              <option value="computer_science">Computer Science</option>
+              <option value="computer_information_systems">Computer Information Systems</option>
+              <option value="computer_technology">Computer Technology</option>
+            </select>
+          </div>
+          <div class="col-md-3 form-group">
+            <label for="matricNumber" class="">Matric number</label>
+            <input type="text" class="form-control" name="matricNumber" value="" placeholder="e.g. 16/2020">
+          </div>
+          <div class="col-md-3 form-group">
+            <label for="graduationYear"  class="">Graduation year</label>
+            <select class="form-control" name="graduationYear">
+              <option selected>Choose...</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+        </div>
+        <input type="submit" value="Sign Up" class="btn btn-primary mt-1 mb-5">
       </form>
     </section>
-    <footer class="inner-container">
-      <span>Project Explorer &copy; 2020 &#8729; Edconnect</span>
+    <footer class="container">
+      <div class="bg-light p-2 d-flex">
+        <span class="ml-auto">Project Explorer &copy; 2020 &#8729; Edconnect</span>
+      </div>
     </footer>
   </body>
 </html>
