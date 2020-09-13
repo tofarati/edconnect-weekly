@@ -8,7 +8,7 @@ class DataModel {
     }
 
     getById(id) {
-
+        return this.data.find(entity => entity.id === id) || null;
     }
 
     save(obj) {
@@ -20,11 +20,26 @@ class DataModel {
     }
 
     update(obj, id) {
-
+      let flag = false;
+      this.data = this.data.map(entity => {
+        if(entity.id === id){
+          const prototype = Object.getPrototypeOf(entity);
+          entity = Object.assign(Object.create(prototype), entity, obj);
+          flag = true;
+        }
+        return entity;
+      })
+      return flag;
     }
 
     delete(id) {
-
+      let position = this.data.findIndex(entity => entity.id === id);
+      if(position===-1){
+        return false;
+      } else {
+        this.data.splice(position, 1);
+        return true;
+      }
     }
 
     // this method will be overriden in the sub classes
