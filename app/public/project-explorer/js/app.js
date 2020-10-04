@@ -201,9 +201,8 @@ if (window.location.pathname.includes("/createProject")){
         name: $('input[name=name]').val(),
         abstract: $('textarea[name=abstract]').val() || '',
         authors: (authors? authors.split(',').map(x => x.trim()): undefined),
-        tags: (tags? tags.replaceAll(',','').split('#').filter(x => x.trim().length).map(x => '#'+x.trim()): undefined)
+        tags: (tags? tags.split(',').join('').split('#').filter(x => x.trim().length).map(x => '#'+x.trim()): undefined)
       }
-      console.log(JSON.stringify(project));
 
       fetch('/api/projects', {
         method: 'POST',
