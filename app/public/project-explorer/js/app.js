@@ -169,7 +169,7 @@ if (window.location.pathname.includes("/viewProject")){
       $('#project_name').text(data.name);
       $('#project_abstract').text(data.abstract);
       data.authors.forEach( author => {
-        var $author = $(document.createElement('div'));
+        var $author = $(document.createElement('li'));
         $author.addClass('list-group-item text-capitalize');
         $author.text(author);
         $author.appendTo('#project_authors');
@@ -200,8 +200,8 @@ if (window.location.pathname.includes("/createProject")){
       const project = {
         name: $('input[name=name]').val(),
         abstract: $('textarea[name=abstract]').val() || '',
-        authors: (authors? authors.split(',').map(x => x.trim()): undefined),
-        tags: (tags? tags.split(',').join('').split('#').filter(x => x.length).map(x => '#'+x.trim()): undefined)
+        authors: (authors? authors.split(',')/*.map(x => x.trim())*/: undefined),
+        tags: (tags? tags.split(',').join('').split('#').filter(x => x.trim().length).map(x => '#'+x.trim()): undefined)
       }
 
       fetch('/api/projects', {
