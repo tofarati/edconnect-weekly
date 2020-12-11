@@ -5,7 +5,7 @@ import {
   FormControl,
   Button
 } from 'react-bootstrap';
-import {useState,
+import {React, useState,
         useEffect} from 'react';
 
 const Header = ({passLoginStatus}) => {
@@ -49,8 +49,8 @@ const Header = ({passLoginStatus}) => {
       <Navbar.Toggle aria-controls='responsive-nav'/>
       <Navbar.Collapse id='responsive-nav' animation='false' className="d-lg-flex flex-lg-row justify-content-lg-between">
           <Form inline>
-            <FormControl type='text' placeholder='Search Projects' className='mr-sm-2' />
-            <Button variant='outline-light' className='mr-sm-2'>Search</Button>
+            <FormControl type='text' placeholder='Search Projects' className='mr-sm-2 my-1'/>
+            <Button variant='outline-light' className='mr-sm-2 my-1'>Search</Button>
           </Form>
         <Nav className='flex-lg-fill'>
           <Nav.Link href='/projects'>Projects</Nav.Link>

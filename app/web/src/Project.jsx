@@ -24,15 +24,15 @@ const Project = (props) => {
       <Container fluid className='bg-light mb-4'>
         <Row className='py-2'>
           <Col>
-            <h6 className='m-auto' id='project_author'>CreatedBy<br/>{creator}</h6>
+            <h6 className='m-2' id='project_author'>CreatedBy<br/>{creator}</h6>
           </Col>
           <Col>
-            <h6 className='m-auto'>Date Created<br/>03/03/2020</h6>
+            <h6 className='m-2'>Date Created<br/>03/03/2020</h6>
           </Col>
           <Col>
-            <h6 className='m-auto'>Last Updated<br/>04/04/2020</h6>
+            <h6 className='m-2'>Last Updated<br/>04/04/2020</h6>
           </Col>
-          <Col className='text-right'>
+          <Col className='text-right py-2'>
             <Button href={`/project/${id}/edit`} className='m-auto'>Edit Project</Button>
           </Col>
         </Row>
