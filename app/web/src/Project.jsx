@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import {Card, ListGroup, Form, Button, Container, Row, Col} from 'react-bootstrap';
 import Layout from './shared/Layout';

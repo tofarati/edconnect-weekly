@@ -1,3 +1,5 @@
+import React, {useState,
+        useEffect} from 'react';
 import {
   Nav,
   Navbar,
@@ -5,8 +7,6 @@ import {
   FormControl,
   Button
 } from 'react-bootstrap';
-import {React, useState,
-        useEffect} from 'react';
 
 const Header = ({passLoginStatus}) => {
   const [loggedIn, setLoggedIn] = useState();
@@ -42,31 +42,31 @@ const Header = ({passLoginStatus}) => {
   }
 
   return (
-    <Navbar bg='primary' variant='dark' expand='lg' animation='false'>
-      <Navbar.Brand href='/'>
-        Project Explorer
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls='responsive-nav'/>
-      <Navbar.Collapse id='responsive-nav' animation='false' className="d-lg-flex flex-lg-row justify-content-lg-between">
-          <Form inline>
-            <FormControl type='text' placeholder='Search Projects' className='mr-sm-2 my-1'/>
-            <Button variant='outline-light' className='mr-sm-2 my-1'>Search</Button>
-          </Form>
-        <Nav className='flex-lg-fill'>
+    <Navbar bg='primary' variant='dark' className='justify-content-between'>
+      <Nav>
+        <Navbar.Brand href='/'>Project Explorer</Navbar.Brand>
+      {/*<Navbar.Toggle aria-controls='responsive-nav'/>
+      <Navbar.Collapse id='responsive-nav' animation='false' className="d-lg-flex flex-lg-row justify-content-lg-between">*/}
+        <Form inline>
+          <FormControl type='text' placeholder='Search Projects' className='mr-sm-2'/>
+          <Button variant='outline-light' className='mr-sm-2'>Search</Button>
+        </Form>
+        <Nav>
           <Nav.Link href='/projects'>Projects</Nav.Link>
-          <Nav.Link href='/projects/submit' className='mr-lg-auto'>Submit</Nav.Link>
+          <Nav.Link href='/projects/submit'>Submit</Nav.Link>
+        </Nav>
+      </Nav>
           {loggedIn ?
-          <>
+          <Nav className='justify-content-end'>
             <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
             <Nav.Link id='username'>Hi, {userName}</Nav.Link>
-          </> :
-          <>
+          </Nav> :
+          <Nav className='justify-content-end'>
             <Nav.Link href='/signup'>Sign Up</Nav.Link>
             <Nav.Link href='/login'>Login</Nav.Link>
-          </>
+          </Nav>
           }
-        </Nav>
-      </Navbar.Collapse>
+      {/*</Navbar.Collapse>*/}
     </Navbar>
   );
 }
