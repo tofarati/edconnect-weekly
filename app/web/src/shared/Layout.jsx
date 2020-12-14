@@ -1,17 +1,17 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import {Container} from 'react-bootstrap';
 
-const Layout = ({children, passLoginStatus}) => {
-
+const Layout = (props) => {
   return (
     <>
-      <Header passLoginStatus={passLoginStatus}/>
-        <Container fluid className="p-5">{children}</Container>
+      <Header/>
+      <main className="p-5 container-fluid">
+      {props.children}
+      </main>
       <Footer/>
     </>
-  );
+  )
 }
 
 export default Layout;
