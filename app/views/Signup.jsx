@@ -33,9 +33,8 @@ const Signup = ({user, programs, graduationYears, errors, formData}) => {
           <Form.Row>
             <Form.Group className='mx-1'>
               <Form.Label>Program</Form.Label>
-              <Form.Control as='select' name='program' custom>
-                <option value=''>Choose...</option>
-                {programs.map((program, idx) => <option key={idx} value={program} selected={(formData!==undefined && formData.program===program)?true:false}>{program}</option>)}
+              <Form.Control as='select' name='program' defaultValue={formData?formData.program:''} custom>
+                {programs.map((program, idx) => <option key={idx} value={program}>{program}</option>)}
               </Form.Control>
             </Form.Group>
             <Form.Group className='mx-1'>
@@ -44,9 +43,9 @@ const Signup = ({user, programs, graduationYears, errors, formData}) => {
             </Form.Group>
             <Form.Group className='mx-1'>
               <Form.Label>Graduation year</Form.Label>
-              <Form.Control as='select' name='graduationYear' custom>
+              <Form.Control as='select' name='graduationYear' defaultValue={formData?formData.graduationYear:''} custom>
                 <option value=''>Choose...</option>
-                {graduationYears.map((year, idx) => <option key={idx} value={year} selected={(formData!==undefined && formData.graduationYear===year)?true:false}>{year}</option>)}
+                {graduationYears.map((year, idx) => <option key={idx} value={year}>{year}</option>)}
               </Form.Control>
           </Form.Group>
           </Form.Row>
