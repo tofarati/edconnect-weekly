@@ -42,10 +42,10 @@ const Project = ({user, project, creatorName}) => {
               <Card className='mb-3'>
                 <Card.Header>Author(s)</Card.Header>
                 <ListGroup variant='flush' id='project_authors'>
-                  {project.authors?.map((author, idx) => <ListGroup.Item key={idx}>{author}</ListGroup.Item>)}
+                  {project.authors.map((author, idx) => <ListGroup.Item key={idx}>{author}</ListGroup.Item>)}
                 </ListGroup>
                 <Card.Footer className='text-primary' id='project_tags'>
-                  {project.tags?.join(' ')}
+                  {project.tags.join(' ')}
                 </Card.Footer>
               </Card>
               <Card>
