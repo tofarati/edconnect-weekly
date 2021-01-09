@@ -8,7 +8,7 @@ import Layout from './shared/Layout';
 const ProjectCard = ({id, name, authors, abstract, tags}) => {
   return (
     <Card style={{ width: '18rem' }} className='mb-4 hoverable'>
-      <a href={`/projects/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <a href={`/project/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
         <Card.Body>
           <Card.Title className='text-primary'>{name}</Card.Title>
           <Card.Subtitle>{authors.join(', ')}</Card.Subtitle>

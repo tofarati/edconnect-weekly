@@ -42,7 +42,7 @@ router.post('/projects/submit', (req, res) => {
   }
 });
 
-router.get('/projects/:id', (req, res) => {
+router.get('/project/:id', (req, res) => {
   const projectData = project.getById(req.params.id);
   const creator = user.getById(projectData.createdBy);
   const creatorName = creator.firstname + ' ' + creator.lastname;
