@@ -13,38 +13,38 @@ const Signup = ({user, programs, graduationYears, errors, formData}) => {
           <Form.Row>
             <Form.Group className='mx-1'>
               <Form.Label>First name</Form.Label>
-              <Form.Control required type="text" name='firstname' defaultValue={formData?formData.firstname:''} placeholder="First name"/>
+              <Form.Control type="text" name='firstName' defaultValue={formData?formData.firstname:''} placeholder="First name"/>
             </Form.Group>
             <Form.Group className='mx-1'>
               <Form.Label>Last name</Form.Label>
-              <Form.Control required type="text" name='lastname' defaultValue={formData?formData.lastname:''} placeholder="Last name"/>
+              <Form.Control type="text" name='lastName' defaultValue={formData?formData.lastname:''} placeholder="Last name"/>
             </Form.Group>
           </Form.Row>
           <Form.Row>
             <Form.Group className='mx-1'>
               <Form.Label>Email Address</Form.Label>
-              <Form.Control required type="email" name='email' defaultValue={formData?formData.email:''} placeholder="Your email address"/>
+              <Form.Control type="email" name='email' defaultValue={formData?formData.email:''} placeholder="Your email address"/>
             </Form.Group>
             <Form.Group className='mx-1'>
               <Form.Label>Password</Form.Label>
-              <Form.Control required type="password" name='password' defaultValue={formData?formData.password:''} placeholder="Enter password"/>
+              <Form.Control type="password" name='password' defaultValue={formData?formData.password:''} placeholder="Enter password"/>
             </Form.Group>
           </Form.Row>
           <Form.Row>
             <Form.Group className='mx-1'>
               <Form.Label>Program</Form.Label>
-              <Form.Control required as='select' name='program' custom>
+              <Form.Control as='select' name='program' custom>
                 <option value=''>Choose...</option>
                 {programs.map((program, idx) => <option key={idx} value={program} selected={(formData!==undefined && formData.program===program)?true:false}>{program}</option>)}
               </Form.Control>
             </Form.Group>
             <Form.Group className='mx-1'>
               <Form.Label>Matric Number</Form.Label>
-              <Form.Control required type="text" name='matricNumber' defaultValue={formData?formData.matricNumber:''} placeholder="00/0000"/>
+              <Form.Control type="text" name='matricNumber' defaultValue={formData?formData.matricNumber:''} placeholder="00/0000"/>
             </Form.Group>
             <Form.Group className='mx-1'>
               <Form.Label>Graduation year</Form.Label>
-              <Form.Control required as='select' name='graduationYear' custom>
+              <Form.Control as='select' name='graduationYear' custom>
                 <option value=''>Choose...</option>
                 {graduationYears.map((year, idx) => <option key={idx} value={year} selected={(formData!==undefined && formData.graduationYear===year)?true:false}>{year}</option>)}
               </Form.Control>
