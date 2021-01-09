@@ -44,7 +44,6 @@ const Signup = ({user, programs, graduationYears, errors, formData}) => {
             <Form.Group className='mx-1'>
               <Form.Label>Graduation year</Form.Label>
               <Form.Control as='select' name='graduationYear' defaultValue={formData?formData.graduationYear:''} custom>
-                <option value=''>Choose...</option>
                 {graduationYears.map((year, idx) => <option key={idx} value={year}>{year}</option>)}
               </Form.Control>
           </Form.Group>
