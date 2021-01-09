@@ -1,31 +1,17 @@
-import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import React from 'react';
 import {Card, ListGroup, Form, Button, Container, Row, Col} from 'react-bootstrap';
 import Layout from './shared/Layout';
 
-const Project = (props) => {
-  const [project, setProject] = useState({});
-  const [creator, setCreator] = useState('');
-  const { id } = useParams();
-
-  useEffect(()=>{
-    fetch(`/api/projects/${id}`)
-    .then(response => response.json()).then(data => {
-      setProject({...data})
-      fetch(`/api/users/${data.createdBy}`).then(response => response.json()).then(data => {
-        setCreator(data.firstname+' '+data.lastname);
-      });
-    })
-  },[id])
+const Project = ({user, project, creatorName}) => {
 
   return (
-    <Layout>
+    <Layout user={user}>
       <>
         <h4 className='mt-4 mb-3' id='project_name'>{project.name}</h4>
         <Container fluid className='bg-light mb-4'>
           <Row className='py-2'>
             <Col>
-              <h6 className='m-2' id='project_author'>CreatedBy<br/>{creator}</h6>
+              <h6 className='m-2' id='project_author'>CreatedBy<br/>{creatorName}</h6>
             </Col>
             <Col>
               <h6 className='m-2'>Date Created<br/>03/03/2020</h6>
@@ -34,7 +20,7 @@ const Project = (props) => {
               <h6 className='m-2'>Last Updated<br/>04/04/2020</h6>
             </Col>
             <Col className='text-right py-2'>
-              <Button href={`/project/${id}/edit`} className='m-auto'>Edit Project</Button>
+              <Button href={`/projects/${project.id}/edit`} className='m-auto'>Edit Project</Button>
             </Col>
           </Row>
         </Container>
@@ -56,7 +42,7 @@ const Project = (props) => {
               <Card className='mb-3'>
                 <Card.Header>Author(s)</Card.Header>
                 <ListGroup variant='flush' id='project_authors'>
-                  {project.authors?.map((author) => <ListGroup.Item>{author}</ListGroup.Item>)}
+                  {project.authors?.map((author, idx) => <ListGroup.Item key={idx}>{author}</ListGroup.Item>)}
                 </ListGroup>
                 <Card.Footer className='text-primary' id='project_tags'>
                   {project.tags?.join(' ')}

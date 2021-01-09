@@ -12,3 +12,7 @@
   -moz-box-shadow: -1px 0px 10px -3px;
   box-shadow: -1px 0px 10px -3px;
 }
+
+.pre-line {
+  white-space: pre-line;
+}

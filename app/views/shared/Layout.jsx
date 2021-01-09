@@ -2,12 +2,12 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = (props) => {
+const Layout = ({user, children}) => {
   return (
     <>
-      <Header/>
+      <Header user={user}/>
       <main className="p-5 container-fluid">
-      {props.children}
+      {children}
       </main>
       <Footer/>
     </>
