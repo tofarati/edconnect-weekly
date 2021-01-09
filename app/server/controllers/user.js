@@ -20,7 +20,14 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', (req, res) => {
-  const newUser = req.body;
+  const newUser = { 
+    firstname: req.body.firstName, 
+    lastname: req.body.lastName, 
+    email: req.body.email, 
+    password: req.body.password, 
+    program: req.body.program, 
+    matricNumber: req.body.matricNumber, 
+    graduationYear: req.body.graduationYear };
   const [isCreated, result] = user.create(newUser);
 
   if(isCreated){
